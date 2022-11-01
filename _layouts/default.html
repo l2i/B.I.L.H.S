@@ -16,6 +16,23 @@
 .hid .abx{position:relative;opacity:1;z-index:unset;}
 </style>
 <body id='body'>
+  <div id='pop_ad' style='width:1500px;opacity:0;position:fixed;z-index:999;transform:scale(10);transform-origin:top left;'><ins class='adsbygoogle' data-ad-client='ca-pub-6445860567942790' data-ad-format='auto' data-ad-slot='1080250364' data-full-width-responsive='true' style='display:block'/></div>
+  <script>
+    function dhfm(){
+      if(!sessionStorage.a){
+            let spt=document.createElement('script');
+            spt.text=`(adsbygoogle=window.adsbygoogle||[]).push({});`;
+            pop_ad.append(spt);
+        }else{pop_ad.remove()}
+    }
+
+    window.onblur=()=>{
+        if (document.activeElement instanceof HTMLIFrameElement){
+            sessionStorage.a='a';
+            setTimeout(()=>{if(pop_ad){pop_ad.remove()}},500);
+        }
+    }
+  </script> 
   <header id='hedr'><a href='/'>B.I.L.H.S.</a></header>
   <div class='abg' >
     <div class='abx' style='margin-bottom:0;'>
@@ -38,22 +55,6 @@
   <footer id='fotr'><a href='/'>B.I.L.H.S.</a>&nbsp;© 2021 • All Rights Reserved<p id='sml'>.</p></footer>
   
  
-  <div id='pop_ad' style='width:1500px;opacity:0;position:fixed;z-index:999;transform:scale(10);transform-origin:top left;'><ins class='adsbygoogle' data-ad-client='ca-pub-6445860567942790' data-ad-format='auto' data-ad-slot='1080250364' data-full-width-responsive='true' style='display:block'/></div>
-  <script>
-    function dhfm(){
-      if(!sessionStorage.a){
-            let spt=document.createElement('script');
-            spt.text=`(adsbygoogle=window.adsbygoogle||[]).push({});`;
-            pop_ad.append(spt);
-        }else{pop_ad.remove()}
-    }
 
-    window.onblur=()=>{
-        if (document.activeElement instanceof HTMLIFrameElement){
-            sessionStorage.a='a';
-            setTimeout(()=>{if(pop_ad){pop_ad.remove()}},500);
-        }
-    }
-  </script> 
 </body>
 </html>
